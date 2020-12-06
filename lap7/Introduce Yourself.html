@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Introduce Yourself</title>
+    <style type="text/css">
+        body{
+            font-family: Arial,Tahoma;
+            font-size: 20px;
+            border: 1px solid white;
+            background-color: white;
+        }
+        #main{
+            max-width: 1200px;
+            padding: 0;
+            margin-left: auto;
+            margin-right: auto;
+            height: 900px;
+            border: 1px solid black;
+        }
+        #head{
+            height: 100px;
+            background-color: deepskyblue;
+            border: 1px solid white;
+            margin-bottom: 5px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 35px;
+        }
+        #headlink{
+            height: 60px;
+            line-height: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border: 1px solid white;
+            background-color: white;
+            margin-bottom: 5px;
+            clear: both;
+        }
+        #left{
+            width: 250px;
+            min-height: 400px;
+            border: 1px solid white;
+            float: left;
+            background-color: white;
+            margin-bottom: 5px;
+        }
+        #content{
+            width: 650px;
+            min-height: 700px;
+            border: 1px solid white;
+            float: left;
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            background-color: white;
+        }
+        #right{
+            display:flex;
+            justify-content: left;
+            align-items: center;
+            width:250px;
+            min-height: 100px;
+            border: 1px solid white;
+            float: right;
+            margin-bottom: 5px;
+        }
+        #footer{
+            height: 50px;
+            clear: both;
+            border: 1px solid white;
+            background-color: #f8f8ff;
+        }
+        #right #thoi_gian{
+            display:flex;
+        }
+        #right #thoi_gian div{
+            position: relative;
+            margin: 0 5px;
+        }
+        #right #thoi_gian div span{
+            position: relative;
+            width: 60px;
+            display:block;
+            height: 30px;
+            background: #71c1f1;
+            color: black;
+            font-weight: bold;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+            z-index:3;
+            box-shadow: 0 0 0 1px rgba(0,0,0,0.2);
+        }
+        .bold{
+            font-weight: bold;
+        }
+        .tq{
+            margin: 15px;
+        }
+    </style>
+</head>
+<body>
+    <form action="http://www.example.com/login.php">
+        <div id="main">
+            <div id="head">
+                <p> </p>
+                Giới thiệu bản thân
+            </div>
+            <div id="headlink">
+                <a href="Introduce%20Yourself.html" id="home">Home</a>
+                <a href="xem%20thêm.html" id="test">Xem thêm</a>
+            </div>
+            <div id="left">
+                <fieldset id="anh">
+                    <p class="bold" style="font-size: 25px">Ảnh</p>
+                    <br>
+                    <img src="../my img/tổ 1 lớp 12.jpg" height="130" width="200" border="2px double"/>
+                    <img src="../my img/ki yeu 1.jpg" height="130" width="200" border="2px double"/>
+                </fieldset>
+            </div>
+            <div id="content">
+                <fieldset class="tq">
+                    <legend class="bold">Tổng quan</legend>
+                    <p>Tên:<b>Phạm Đức Minh.</b></p>
+                    <p>Ngày sinh:14-10-2002.</p>
+                    <p>Giới tinh:Nam.</p>
+                    <p>Quê quán:Vũ Thư-Thái Bình.</p>
+                </fieldset>
+                <fieldset class="tq">
+                    <legend class="bold">Công việc và học vấn:</legend>
+                    <p>Công việc hiện tại:  Sinh viên.</p>
+                    <p>Học vấn:</p>
+                    <ul>
+                        <li>Đang học tại FPT Aptech.</li>
+                        <li>Đã học tại Trường THPT Nguyễn Trãi - Vũ Thư - Thái Bình.</li>
+                    </ul>
+                </fieldset>
+                <fieldset class="tq">
+                    <legend class="bold">Thông tin liên hệ:</legend>
+                    <p>SĐT:0866133204</p>
+                    <p>Facebook: <a href="https://www.facebook.com/pham.minh.1410/about">Phạm Minh</a></p>
+                    <p>Gmail: <a href="https://myaccount.google.com/?utm_source=chrome-profile-chooser&pli=1&nlr=1&authuser=1">pminh1410@gmail.com</a></p>
+                </fieldset>
+            </div>
+            <div id="right">
+                <div id="thoi_gian">
+                    <div>
+                        <span id="gio">00</span><span>Giờ</span>
+                    </div>
+                    <div>
+                        <span id="phut">00</span><span>Phút</span>
+                    </div>
+                    <div>
+                        <span id="giay">00</span><span>Giây</span>
+                        <script>
+                            function Dong_ho() {
+                                var gio = document.getElementById("gio");
+                                var phut = document.getElementById("phut");
+                                var giay = document.getElementById("giay");
+                                var Gio_hien_tai = new Date().getHours();
+                                var Phut_hien_tai = new Date().getMinutes();
+                                var Giay_hien_tai = new Date().getSeconds();
+                                gio.innerHTML = Gio_hien_tai;
+                                phut.innerHTML = Phut_hien_tai;
+                                giay.innerHTML = Giay_hien_tai;
+                            }
+                            var Dem_gio = setInterval(Dong_ho, 1000);
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div id="footer">
+                <a href="#home">Home</a>
+                <a href="#test">Xem thêm</a>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

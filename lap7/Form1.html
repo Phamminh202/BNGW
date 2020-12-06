@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+    <style>
+        body{
+            line-height: 35px;
+            font-family: auto;
+        }
+        #select{
+            border: #30aae9 solid;
+        }
+        #two{
+            margin-top: 10px;
+        }
+        #submit{
+            background-color: white;
+            border: 1px outset;
+        }
+    </style>
+</head>
+<body>
+    <form action="http://www.example.com/login.php">
+        <fieldset id="one">
+            <legend>Your Details:</legend>
+            <label>Name:<input type="text" name="user"></label><br>
+            <label>Email:<input type="email" name="email"></label>
+        </fieldset>
+        <fieldset id="two">
+            <legend>Your Review:</legend>
+            <p>How did you hear about us?
+                <select name="instrument" id="select" size="1">
+                    <option value="google" selected="selected">Google</option>
+                    <option value="friend">Friend</option>
+                    <option value="advert">Advert</option>
+                    <option value="other">Other</option>
+                </select>
+            </p>
+            <p>Would you visit again? <br>
+                <input type="radio" name="ques" value="Yes">Yes
+                <input type="radio" name="ques" value="No">No
+                <input type="radio" name="ques" value="Maybe">Maybe
+            </p>
+            <p>Comments: <br>
+                <textarea name="cmt" cols="50" rows="4"></textarea><br>
+            </p>
+            <input type="checkbox" name="sign" checked>Sign me up for email updates. <br>
+            <input type="submit" value="Submit review" id="submit">
+        </fieldset>
+    </form>
+</body>
+</html>
