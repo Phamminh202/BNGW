@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Boxes</title>
+    <style type="text/css">
+        body{
+            font-family: Arial,Verdana,monospace;
+        }
+        #mainn{
+            width: 1000px;
+            height: 450px;
+            margin-left: auto;
+            margin-right: auto;
+            border: 4px double black;
+        }
+        #main{
+            width: 600px;
+            height: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0;
+            border: 2px double white;
+        }
+        #head{
+            width: 600px;
+            height: 100px;
+            border-bottom: 3px solid black;
+            text-align: center;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        #headlink{
+            height: 40px;
+            border-bottom: 2px solid black;
+            text-align: center;
+            margin-top: 20px;
+            word-spacing:30px;
+        }
+        #center{
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        #footer{
+            text-align: center;
+        }
+        #home{
+            color: black;
+            text-decoration: none;
+        }
+        #home:hover{
+            color: red;
+        }
+        #home:active{
+            color: red;
+            text-decoration: underline;
+        }
+        #home:focus{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <form action="http://www.example.com/login.php">
+      <div id="mainn">
+        <div id="main">
+            <div id="head">
+                <img src="img/logo.gif" height="58" width="150" style="margin-top: 15px"/>
+            </div>
+            <div id="headlink">
+                <a href="Boxes.html" id="home">HOME</a>
+                <a style="word-spacing: 5px">FOR SALE</a>
+                <a>REPAIRS</a>
+                <a>ABOUT</a>
+                <a>CONTACT</a>
+            </div>
+            <div id="center">
+                <img src="img/keys.jpg" height="150" width="600"/>
+            </div>
+            <div id="footer">
+                <p>We specialize in the and repair of classic keyboards, in particual the Fender Rhodes, Wurlitzer EP200, and Hohner Clavinet.</p>
+            </div>
+        </div>
+      </div>
+    </form>
+</body>
+</html>
