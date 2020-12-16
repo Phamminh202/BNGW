@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BT4</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function (){
+            $("button").click(function () {
+                $("#divl").load("http://s3-us-west-2.amazonaws.com/ajaxex/html/ajaxContent.html",function (responseTxt,statusTxt,
+                if(statusTxt==="success")
+                    alert("Remote content loaded successfully!");
+                if (statusTxt==="error")
+                    alert("Error: "+xhr.status+": " + xhr.statusText);
+                ));
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div id="divl"><h2>Executing Ajax load and Callback</h2></div>
+        <button>GET CONTENT FORM REMOTE HTML FILE</button>
+    </div>
+</body>
+</html>
